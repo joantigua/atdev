@@ -19,26 +19,17 @@ def results(request):
     isr = 0
    
 
-    if gross_payot <= (416220.00 / 12):
+    if gross_payot <= 34685.001:
         isr = 0
 
-    elif (gross_payot >= (416220.01 / 12)) and (gross_payot <= (624329.00 / 12)):
-        if gross_payot > (416220.01 / 12):
-            isr = (((gross_payot - (624329.01 / 12)) * 0.20) + (31216.00 / 12))
-        else:
-            isr = (((416220.01 / 12) - gross_payot) * 0.15)
+    elif (gross_payot > 34685.001) and (gross_payot <= 52027.417):
+            isr = ((gross_payot - 34685.0008) * 0.15)
 
-    elif (gross_payot >= (624329.01 / 12)) and (gross_payot <= (867123.00 / 12)):
-        if gross_payot > (624329.01 / 12):
-            isr = (((gross_payot - (624329.01 / 12)) * 0.20) + (31216.00 / 12))
-        else:
-            isr = ((((624329.01 / 12) - gross_payot) * 0.20) + (31216.00 / 12))
+    elif (gross_payot >= 52027.418) and (gross_payot <= 72260.250):
+            isr = (((gross_payot - 52027.418) * 0.20) + 2601.333)
 
-    elif (gross_payot >= (867123.01 / 12)):
-        if gross_payot > (867123.01 / 12):
-            isr = (((gross_payot - (624329.01 / 12)) * 0.20) + (31216.00 / 12))
-        else:
-            isr = ((((867123.01 / 12) - gross_payot) * 0.25) + (79776.00 / 12))
+    elif (gross_payot >= 72260.251):
+            isr = (((gross_payot - 52027.417) * 0.25) + 6648.000)
 
     discounts = sfs + afp + isr
     net_pay = gross_payot - discounts
