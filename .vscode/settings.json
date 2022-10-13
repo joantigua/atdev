@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/109ac921-0eb4-42ed-ac36-d90d9d12006b/AppServices/subscriptions/109ac921-0eb4-42ed-ac36-d90d9d12006b/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/salarycalculator",
+    "appService.deploySubpath": "."
+}
